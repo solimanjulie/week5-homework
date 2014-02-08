@@ -2,13 +2,7 @@
   <div class="row">
     <% group.each do |comic| %>
       <div class='col-lg-3 test'>
-
           <%= link_to image_tag(comic.image_url, :class => "col-md-12"), "/comics/#{comic.id}", class:'img-responsive' "col-md-3"%>
-
-
-
-        <!-- SHOW THE IMAGE OF THE COMIC BOOK AND MAKE THE ENTIRE IMAGE A LINK.
-             ATTACH THE CLASS OF 'image-responsive' TO THIS LINK -->
       </div>
     <% end %>
   </div>

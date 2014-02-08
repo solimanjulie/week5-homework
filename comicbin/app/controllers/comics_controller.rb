@@ -24,8 +24,12 @@ class ComicsController < ApplicationController
   def create
     c = Comic.new
     c.title = params["title"]
-    c.description = params["description"];
-    c.image_url = params["image_url"];
+    c.description = params["description"]
+    if (params["image_url"] != "")
+      c.image_url = params["image_url"]
+    else
+      c.image_url = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/detail.jpg"
+    end
     c.save
     redirect_to "/comics"
   end
