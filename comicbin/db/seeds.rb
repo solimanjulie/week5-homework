@@ -9,7 +9,7 @@ comics.each do |comic_info|
   c = Comic.new
   c.title = comic_info["title"]
   c.description = comic_info["description"]
-  c.image_url = comic_info["thumbnail"]["path"]
+  c.image_url = comic_info["thumbnail"]["path"] + "/detail.jpg"
   c.save
 end
 
